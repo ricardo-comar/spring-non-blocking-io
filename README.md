@@ -55,4 +55,3 @@ class SpringBootOneSimulation extends Simulation {
     .protocols(httpConf)
 }
 ```
-
