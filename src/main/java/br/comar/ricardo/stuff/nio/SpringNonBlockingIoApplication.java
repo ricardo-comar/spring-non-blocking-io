@@ -1,19 +1,15 @@
 package br.comar.ricardo.stuff.nio;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.context.web.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class SpringNonBlockingIoApplication extends SpringBootServletInitializer {
+@EnableAutoConfiguration
+public class SpringNonBlockingIoApplication {
 
-    @Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(SpringNonBlockingIoApplication.class);
-	}
-
-	public static void main(String[] args) {
-		new SpringNonBlockingIoApplication().configure(
-				new SpringApplicationBuilder(SpringNonBlockingIoApplication.class)).run(args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SpringNonBlockingIoApplication.class, args);
+    }
 }
+
