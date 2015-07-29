@@ -1,11 +1,14 @@
 package br.comar.ricardo.stuff.nio;
 
+import javax.ws.rs.ApplicationPath;
+
 import org.glassfish.jersey.server.ResourceConfig;
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Configuration;
 
 import br.comar.ricardo.stuff.nio.resources.NIOResource;
 
-@Component
+@Configuration
+@ApplicationPath("/api")
 public class JerseyConfig extends ResourceConfig {
 
 	public JerseyConfig() {
